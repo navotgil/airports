@@ -1,0 +1,10 @@
+{% extends "/html/base.html" %}
+{% block title %} All Airports{% endblock %}
+
+{% block main %}
+<ul>
+{% for a in airports %}
+	<li><a href="/airports/{{a['ident']}}" >{{a['name']}}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

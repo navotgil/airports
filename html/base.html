@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}Having Fun{% endblock %}</title>
+		<link rel="stylesheet" href="/css/fun.css?v={{version}}">
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+		<script src="/js/fun.js?v={{version}}" type="text/javascript"></script>
+	</head>
+	<body>
+    <div class="menu">
+		<img class="logo" src="/images/logo.png" />
+        <nav>
+			{% block nav %}
+            {% endblock %}
+		</nav>
+    </div>
+    <main>
+		{% block main %}
+		{% endblock %}
+    </main>
+	</body>
+</html>

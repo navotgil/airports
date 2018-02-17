@@ -1,0 +1,9 @@
+{% extends "/html/base.html" %}
+{% block title %} {{airport.name}}{% endblock %}
+
+{% block nav %}
+<a href="/airports">Back</a>
+{% endblock %}
+{% block main %}
+nfo about <b>{{airport.name}}</b>:
+{% endblock %}

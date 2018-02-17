@@ -1,0 +1,20 @@
+{% extends "/html/base.html" %}
+{% block title %} {{airport.name}}{% endblock %}
+
+{% block nav %}
+<a href="/airports">Back</a>
+{% endblock %}
+{% block main %}
+<h1>Info about <b>{{airport.name}}</b>:</h1>
+
+<iframe 
+  width="500" 
+  height="500" 
+  frameborder="0" 
+  scrolling="no" 
+  marginheight="0" 
+  marginwidth="0" 
+  src="https://maps.google.com/maps?q={{airport['latitude_deg']}},{{airport['longitude_deg']}}&zoom=5&amp;output=embed"
+ >
+ </iframe>
+{% endblock %}
